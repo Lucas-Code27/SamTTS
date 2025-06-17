@@ -13,7 +13,7 @@ def callback(indata, frames, time, status):
     q.put(bytes(indata))
 
 # Load the model
-model = Model("models/small-en-us")  # e.g. "models/vosk-model-small-en-us-0.15"
+model = Model("models/small-en-us")
 rec = KaldiRecognizer(model, 16000)
 
 # Start the stream
